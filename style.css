@@ -1,0 +1,49 @@
+
+/* ----------- Color Variables --------- */
+/* Looking for the color variables? They have been moved to the inline-styles file in the _includes folder, and pull variables from the site-settings folder in the _data folder.  */
+
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS */
+
+html {
+  scroll-behavior: smooth; /* this enables smooth scrolling between internal links */
+}
+
+h1, h2, h3, h4, h5 {
+  line-height: 1;
+  font-weight: 800;
+}
+
+
+
+input, textarea{
+  margin-bottom: 1rem;
+  color: black;
+}
+
+p{
+  margin-top: 1.25rem;
+}
+
+.portrait{
+  aspect-ratio: .66;
+}
+.landscape{
+  aspect-ratio: 1.25;
+}
+
+img{
+  max-width: 100%;
+}
+
+@layer utilities{
+  .rotate-text-180{
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    @apply rotate-180;
+  }
+}
