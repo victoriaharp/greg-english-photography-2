@@ -23,7 +23,7 @@ module.exports = {
       '9xl': ['8rem', '1'],
     },
     fontFamily: {
-      'sans': ['Roboto', 'sans-serif'],
+      'sans': ['Figtree', 'sans-serif'],
       'serif': ['proxima-nova-condensed', 'ui-sans-serif'],
     },
     extend: {
