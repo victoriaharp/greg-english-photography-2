@@ -1,32 +1,34 @@
 ---
 layout: default
+heading: Interested in hiring Greg for your upcoming shoot? Inquire here.
+image: /images/Greg-Photo-39.JPG
+seo: 
+    title: Greg English Photography | Contact
+    description: 
+    keywords:
+    social_image: /images/Greg-Photo-39.JPG
+    hide-from-google: false
 ---
 
+{% include hero-banner.html %}
 <!-- contact -->
 
 <section class="px-10p">
-    <div class="pb-5p border-b-2 border-black">
-        <h2 class="uppercase font-black text-5xl pb-5p pl-0">Contact us</h2>
+    <div class="pb-5p">
+                <form action="#" method="post" id="contactForm">
+                    <label for="name" class="uppercase block max-w-50 border-b-2 border-dark-grey">Name:</label>
+                    <input type="text" id="name" name="name" required class="w-full block " placeholder="Your name here...">
+            
+                    <label for="email" class="uppercase block max-w-50 border-b-2 border-dark-grey">Email:</label>
+                    <input type="email" id="email" name="email" required class="w-full block " placeholder="gregiscool123@gmail.com">
+            
+                    <label for="message" class="uppercase block ">Message:</label>
+                    <textarea id="message" name="message" rows="4" required class="w-full block border-2 border-dark-grey" placeholder="Tell me what you want, what you really really want!"></textarea>
+                    
+                    <div class="text-right">
+                        <button type="submit" class="text-white bg-dark-grey border-white hover:text-dark-grey hover:bg-white hover:border-dark-grey transition border px-10 py-1 mt-5 uppercase">Send</button>
+                    </div>
+                </form>
 
-            <div class="grid md:grid-cols-2 gap-5">
-                <div class="max-w-lg">
-                    <form action="#" method="post" id="contactForm">
-                        <label for="name" class="uppercase block max-w-50 border-b-2 border-black">Name:</label>
-                        <input type="text" id="name" name="name" required class="w-full block " placeholder="any name will do">
-                
-                        <label for="email" class="uppercase block max-w-50 border-b-2 border-black">Email:</label>
-                        <input type="email" id="email" name="email" required class="w-full block " placeholder="we prefer something real">
-                
-                        <label for="message" class="uppercase block ">Message:</label>
-                        <textarea id="message" name="message" rows="4" required class="w-full block border-2 border-black" placeholder="we love a good compliment"></textarea>
-                        
-                        <div class="text-right">
-                            <button type="submit" class="text-white bg-black border-black hover:text-black hover:bg-white hover:border-black transition border px-10 py-1 mt-5 uppercase">Send it baby</button>
-                        </div>
-                    </form>
-                </div>
-
-                <img src="/assets/images/moody-7.jpg" class="md:pl-5p">
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
