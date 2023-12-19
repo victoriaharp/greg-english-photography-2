@@ -18,6 +18,9 @@ h1, h2, h3, h4, h5 {
   font-weight: 800;
 }
 
+a i{
+  color: white;
+}
 
 input, textarea{
   margin-bottom: 1rem;
@@ -41,47 +44,46 @@ img{
 }
 
 /* dark mode toggle */
-.dark-mode{
+/* .light-mode{
   text-align: right;
 }
-.dark-mode p{
+.light-mode p{
   margin-bottom: 0.2rem;
   font-size: 0.9rem;
-}
+} */
 
 .toggle-container{
   background-color: lightblue;
-  height: 2rem;
-  padding: 0.2rem;
-  width: 4rem;
+  height: 1rem;
+  padding: 0.1rem;
+  width: 2rem;
   display: inline-block;
-  border-radius: 3rem;
+  border-radius: 1.5rem;
   text-align: left;
 }
 
 .toggle-ball{
   background-color: white;
-  height: 1.6rem;
-  width: 1.6rem;
-  border-radius: 2rem;
+  height: .8rem;
+  width: .8rem;
+  border-radius: 1rem;
   display: inline-block;
-
 }
 
-.toggle-container.dark-mode-active{
+.toggle-container.light-mode-active{
   background-color: #ade6d8;
   text-align: right;
 }
 /* dark mode styles */
-body.dark-mode-active{
-  background-color: rgb(60,60,60);
-  color: white;
+body.light-mode-active{
+  @apply bg-white text-dark-grey ;
 }
 
-.dark-mode-active .button{
+
+/* .light-mode-active .button{
   color: #ade6d8;
   border-color: #ade6d8;
-}
+} */
 
 @layer utilities{
   .rotate-text-180{

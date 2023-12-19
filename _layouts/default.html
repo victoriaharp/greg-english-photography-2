@@ -8,15 +8,15 @@
 
         
 
-        <header class="items-center uppercase text-sm px-10p pt-5 mx-auto">
-            <div class="text-center md:text-left md:grid md:grid-cols-2 items-center justify-between border-b-2 border-white pb-3">
-                <h1 class="items-center font-normal"><a href="/">Greg English Photography</a></h2>
-                <nav class="space-x-5 flex justify-center md:justify-end font-normal">
-                    <a href="#about" class="px-3">About</a>
-                    <a href="/gallery.html" class="px-3">Gallery</a>
-                    <a href="/contact.html" class="px-3">Contact</a>
-                    <div class="dark-mode">
-                        <a class="dark-mode-button">Dark Mode</a>
+        <header class="uppercase text-sm px-10p pt-5 mx-auto">
+            <div class="text-center md:text-left md:grid md:grid-cols-2 items-center justify-between border-b-2 py-5">
+                <h1 class="font-normal items-center"><a href="/">Greg English Photography</a></h2>
+                <nav class="space-x-5 flex justify-center md:justify-end items-center font-normal">
+                    <a href="#about" class="px-3 border-b border-transparent hover:border-b-white transition-all">About</a>
+                    <a href="/gallery.html" class="px-3 border-b border-transparent hover:border-b-white transition-all">Gallery</a>
+                    <a href="/contact.html" class="px-3 border-b border-transparent hover:border-b-white transition-all">Contact</a>
+                    <div class="light-mode">
+                        <a class="light-mode-button">Light Mode</a>
                         <div class="toggle-container">
                           <div class="toggle-ball"></div>
                         </div>
@@ -31,15 +31,15 @@
             <div class="text-center">
                 <p class="uppercase text-3xl md:text-5xl font-bold">Greg English <br> Photography</p>
                 <nav class="mt-5 ">
-                    <a href="#" target="_blank"><i class="fa-brands fa-square-pinterest px-5" style="color: #fff;"></i></a>
-                    <a href="#" target="_blank"><i class="fa-brands fa-instagram px-5" style="color: #fff;"></i></a>
-                    <a href="#" target="_blank"><i class="fa-regular fa-envelope px-5" style="color: #fff;"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-square-pinterest px-5"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-instagram px-5"></i></a>
+                    <a href="#" target="_blank"><i class="fa-regular fa-envelope px-5"></i></a>
                 </nav>
             </div>
 
             <img src="/images/Greg-Photo-34.JPG" alt="" class="object-cover object-center aspect-square">
         </footer>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+        {% include body-scripts.html %}
+</body>
 </html>
