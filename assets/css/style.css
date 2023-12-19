@@ -638,24 +638,63 @@ img{
   max-width: 100%;
 }
 
+/* dark mode toggle */
+.dark-mode{
+  text-align: right;
+}
+.dark-mode p{
+  margin-bottom: 0.2rem;
+  font-size: 0.9rem;
+}
+
+.toggle-container{
+  background-color: lightblue;
+  height: 2rem;
+  padding: 0.2rem;
+  width: 4rem;
+  display: inline-block;
+  border-radius: 3rem;
+  text-align: left;
+}
+
+.toggle-ball{
+  background-color: white;
+  height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 2rem;
+  display: inline-block;
+
+}
+
+.toggle-container.dark-mode-active{
+  background-color: #ade6d8;
+  text-align: right;
+}
+/* dark mode styles */
+body.dark-mode-active{
+  background-color: rgb(60,60,60);
+  color: white;
+}
+
+.dark-mode-active .button{
+  color: #ade6d8;
+  border-color: #ade6d8;
+}
 
 .hover\:border-dark-grey:hover {
   --tw-border-opacity: 1;
   border-color: rgb(32 32 32 / var(--tw-border-opacity));
 }
 
-
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-
 .hover\:text-dark-grey:hover {
   --tw-text-opacity: 1;
   color: rgb(32 32 32 / var(--tw-text-opacity));
 }
-
 
 @media (min-width: 768px) {
   .md\:grid {
