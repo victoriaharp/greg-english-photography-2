@@ -404,6 +404,9 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.z-10 {
+  z-index: 10;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -415,20 +418,26 @@ video {
 .mt-5p {
   margin-top: 5%;
 }
-.mb-5p {
-  margin-bottom: 5%;
-}
 .mt-5 {
   margin-top: 1.25rem;
 }
+.mb-5p {
+  margin-bottom: 5%;
+}
 .block {
   display: block;
+}
+.inline-block {
+  display: inline-block;
 }
 .flex {
   display: flex;
 }
 .grid {
   display: grid;
+}
+.hidden {
+  display: none;
 }
 .aspect-square {
   aspect-ratio: 1 / 1;
@@ -453,6 +462,9 @@ video {
 }
 .max-w-50 {
   max-width: 50%;
+}
+.grow {
+  flex-grow: 1;
 }
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -545,6 +557,10 @@ video {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
+.px-5p {
+  padding-left: 5%;
+  padding-right: 5%;
+}
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -570,6 +586,9 @@ video {
 }
 .pb-5p {
   padding-bottom: 5%;
+}
+.text-left {
+  text-align: left;
 }
 .text-center {
   text-align: center;
@@ -603,6 +622,10 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.text-dark-grey {
+  --tw-text-opacity: 1;
+  color: rgb(32 32 32 / var(--tw-text-opacity));
 }
 .transition-all {
   transition-property: all;
@@ -684,7 +707,7 @@ img{
   background-color: #ade6d8;
   text-align: right;
 }
-/* dark mode styles */
+/* light mode styles */
 body.light-mode-active {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -698,26 +721,114 @@ body.light-mode-active {
   border-color: #ade6d8;
 } */
 
+
+/* hamburger menu styles */
+
+.burger-button {
+  position:fixed;
+  top: 2vh;
+  right: 2vh;
+  z-index: 90;
+  padding: 8px;
+}
+/*this is where you can change the color of the buttons*/
+.burger-button span{
+  width: 40px;
+  border: 2px solid white;
+  background-color: rgb(32 32 32);
+  display: block;
+  border-radius: 22px;
+  transition: 2s;
+}
+.burger-button.active span {
+  --tw-border-opacity: 1;
+  border-color: rgb(32 32 32 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(32 32 32 / var(--tw-bg-opacity));
+}
+
+.burger-top, .burger-bottom{
+  position: absolute;
+}
+
+.burger-top{
+  top: -02px;
+}
+
+.burger-bottom{
+  bottom: -02px;
+}
+/* make sure this has the same top as the burger button has padding*/
+.burger-button.active .burger-top{
+  position: absolute;
+  top: 8px;
+  transform: rotateZ(45deg);
+}
+
+.burger-button.active .burger-middle{
+  transform: rotateZ(270deg);
+  border-color: rgba(0,0,0,0);
+  background-color:rgba(0,0,0,0);
+}
+
+/* make sure this has the same bottom as the burger button has padding*/
+
+.burger-button.active .burger-bottom{
+  position: absolute;
+  bottom: 8px;
+  transform: rotateZ(-45deg);
+}
+
+.burger-menu {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    display: flex;
+    position: fixed;
+    top: 0vh;
+    left:100vw;
+    right: -100vw;
+    bottom: 0vh;
+    padding:5px;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+    z-index: 80;
+    transition:1s;
+    align-content:space-around;
+  justify-content:space-around;
+  flex-direction:column;
+}
+.burger-menu.active{
+  left:50vw;
+  right:0;
+}
+.burger-menu a {
+  --tw-text-opacity: 1;
+  color: rgb(32 32 32 / var(--tw-text-opacity));
+  text-decoration: none;
+  font-size: 20px;
+  display:block;
+  padding:5px 15px;
+  text-align:center;
+  white-space:nowrap;
+}
+.last\:pr-0:last-child {
+  padding-right: 0px;
+}
 .hover\:border-dark-grey:hover {
   --tw-border-opacity: 1;
   border-color: rgb(32 32 32 / var(--tw-border-opacity));
 }
-
 .hover\:border-b-white:hover {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
-
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
-
 .hover\:text-dark-grey:hover {
   --tw-text-opacity: 1;
   color: rgb(32 32 32 / var(--tw-text-opacity));
 }
-
 @media (min-width: 768px) {
   .md\:grid {
     display: grid;
@@ -725,14 +836,31 @@ body.light-mode-active {
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .md\:justify-end {
-    justify-content: flex-end;
-  }
-  .md\:text-left {
-    text-align: left;
-  }
   .md\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+}
+@media (min-width: 1024px) {
+  .lg\:block {
+    display: block;
+  }
+  .lg\:grid {
+    display: grid;
+  }
+  .lg\:hidden {
+    display: none;
+  }
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .lg\:justify-end {
+    justify-content: flex-end;
+  }
+  .lg\:pb-0 {
+    padding-bottom: 0px;
+  }
+  .lg\:text-left {
+    text-align: left;
   }
 }
