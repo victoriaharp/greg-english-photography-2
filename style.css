@@ -52,33 +52,6 @@ img{
   font-size: 0.9rem;
 } */
 
-.toggle-container{
-  background-color: lightblue;
-  height: 1rem;
-  padding: 0.1rem;
-  width: 2rem;
-  display: inline-block;
-  border-radius: 1.5rem;
-  text-align: left;
-}
-
-.toggle-ball{
-  background-color: white;
-  height: .8rem;
-  width: .8rem;
-  border-radius: 1rem;
-  display: inline-block;
-}
-
-.toggle-container.light-mode-active{
-  background-color: #ade6d8;
-  text-align: right;
-}
-/* light mode styles */
-body.light-mode-active{
-  @apply bg-white text-dark-grey ;
-}
-
 
 /* .light-mode-active .button{
   color: #ade6d8;
@@ -98,15 +71,15 @@ body.light-mode-active{
 
 .burger-button {
   position:fixed;
-  top: 2vh;
+  top: 4vh;
   right: 2vh;
   z-index: 90;
   padding: 8px;
 }
 /*this is where you can change the color of the buttons*/
 .burger-button span{
-  width: 40px;
-  border: 2px solid white;
+  width: 30px;
+  border: 1px solid white;
   background-color: rgb(32 32 32);
   display: block;
   border-radius: 22px;
@@ -177,3 +150,48 @@ body.light-mode-active{
   text-align:center;
   white-space:nowrap;
 }
+
+/* light mode/dark mode */
+
+.toggle-container{
+  background-color: lightblue;
+  height: 1rem;
+  padding: 0.1rem;
+  width: 2rem;
+  display: inline-block;
+  border-radius: 1.5rem;
+  text-align: left;
+}
+
+.toggle-ball{
+  background-color: white;
+  height: .8rem;
+  width: .8rem;
+  border-radius: 1rem;
+  display: inline-block;
+}
+
+.toggle-container.light-mode-active{
+  background-color: #ade6d8;
+  text-align: right;
+}
+/* light mode styles */
+body.light-mode-active{
+  @apply bg-white text-dark-grey;
+}
+
+
+.light-mode-active .burger-button span{
+  border: 1px solid rgb(32 32 32);
+  background-color: white;
+}
+
+.light-mode-active .border-b-2{
+  border-bottom: 2px solid rgb(32 32 32);
+}
+
+.light-mode-active .fa-brands, .light-mode-active .fa-regular{
+  @apply text-dark-grey;
+}
+
+/* to do: still want to change the text from "light mode" to "dark mode" when active AND save user settings across each page */

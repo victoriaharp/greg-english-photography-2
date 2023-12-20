@@ -685,36 +685,6 @@ img{
   font-size: 0.9rem;
 } */
 
-.toggle-container{
-  background-color: lightblue;
-  height: 1rem;
-  padding: 0.1rem;
-  width: 2rem;
-  display: inline-block;
-  border-radius: 1.5rem;
-  text-align: left;
-}
-
-.toggle-ball{
-  background-color: white;
-  height: .8rem;
-  width: .8rem;
-  border-radius: 1rem;
-  display: inline-block;
-}
-
-.toggle-container.light-mode-active{
-  background-color: #ade6d8;
-  text-align: right;
-}
-/* light mode styles */
-body.light-mode-active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(32 32 32 / var(--tw-text-opacity));
-}
-
 
 /* .light-mode-active .button{
   color: #ade6d8;
@@ -726,15 +696,15 @@ body.light-mode-active {
 
 .burger-button {
   position:fixed;
-  top: 2vh;
+  top: 4vh;
   right: 2vh;
   z-index: 90;
   padding: 8px;
 }
 /*this is where you can change the color of the buttons*/
 .burger-button span{
-  width: 40px;
-  border: 2px solid white;
+  width: 30px;
+  border: 1px solid white;
   background-color: rgb(32 32 32);
   display: block;
   border-radius: 22px;
@@ -810,25 +780,80 @@ body.light-mode-active {
   text-align:center;
   white-space:nowrap;
 }
+
+/* light mode/dark mode */
+
+.toggle-container{
+  background-color: lightblue;
+  height: 1rem;
+  padding: 0.1rem;
+  width: 2rem;
+  display: inline-block;
+  border-radius: 1.5rem;
+  text-align: left;
+}
+
+.toggle-ball{
+  background-color: white;
+  height: .8rem;
+  width: .8rem;
+  border-radius: 1rem;
+  display: inline-block;
+}
+
+.toggle-container.light-mode-active{
+  background-color: #ade6d8;
+  text-align: right;
+}
+/* light mode styles */
+body.light-mode-active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(32 32 32 / var(--tw-text-opacity));
+}
+
+
+.light-mode-active .burger-button span{
+  border: 1px solid rgb(32 32 32);
+  background-color: white;
+}
+
+.light-mode-active .border-b-2{
+  border-bottom: 2px solid rgb(32 32 32);
+}
+
+.light-mode-active .fa-brands, .light-mode-active .fa-regular {
+  --tw-text-opacity: 1;
+  color: rgb(32 32 32 / var(--tw-text-opacity));
+}
+
+/* to do: still want to change the text from "light mode" to "dark mode" when active AND save user settings across each page */
+
 .last\:pr-0:last-child {
   padding-right: 0px;
 }
+
 .hover\:border-dark-grey:hover {
   --tw-border-opacity: 1;
   border-color: rgb(32 32 32 / var(--tw-border-opacity));
 }
+
 .hover\:border-b-white:hover {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
+
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+
 .hover\:text-dark-grey:hover {
   --tw-text-opacity: 1;
   color: rgb(32 32 32 / var(--tw-text-opacity));
 }
+
 @media (min-width: 768px) {
   .md\:grid {
     display: grid;
@@ -841,6 +866,7 @@ body.light-mode-active {
     line-height: 1;
   }
 }
+
 @media (min-width: 1024px) {
   .lg\:block {
     display: block;
@@ -856,9 +882,6 @@ body.light-mode-active {
   }
   .lg\:justify-end {
     justify-content: flex-end;
-  }
-  .lg\:pb-0 {
-    padding-bottom: 0px;
   }
   .lg\:text-left {
     text-align: left;
