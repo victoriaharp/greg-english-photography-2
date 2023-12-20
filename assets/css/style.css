@@ -823,6 +823,13 @@ body.light-mode-active {
   border-bottom: 2px solid rgb(32 32 32);
 }
 
+.light-mode-active .border-b a{
+  border-bottom: transparent;
+}
+.light-mode-active .border-b-white a:hover{
+  border-bottom: 1px solid rgb(32 32 32);
+}
+
 .light-mode-active .fa-brands, .light-mode-active .fa-regular {
   --tw-text-opacity: 1;
   color: rgb(32 32 32 / var(--tw-text-opacity));
