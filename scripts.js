@@ -45,15 +45,3 @@ $( document ).ready(function() {
       }
     });
   });
-
-
-var openLight = new openLight("auto");
-      openLight.openLightColors = {
-        darkBackgroundStyle: "rgb(32, 32, 32)",
-        lightBackgroundStyle: "rgb(255, 255, 255)",
-        darkForegroundStyle: "rgb(255, 255, 255)",
-        lightForegroundStyle: "rgb(32, 32, 32)"
-      }
-      openLight.init();
-
-      openLight.toggleMode();

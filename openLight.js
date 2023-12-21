@@ -222,8 +222,8 @@ class OpenLight {
 
         //Set the HTML element variables
         this.backgrounds = [
-            document.getElementsByTagName('button'),
-            document.getElementsByTagName('input'),
+            // document.getElementsByTagName('button'),
+            // document.getElementsByTagName('input'),
             document.getElementsByTagName('div'),
             document.getElementsByTagName('nav'),
             document.getElementsByTagName('body'),
@@ -248,7 +248,9 @@ class OpenLight {
             document.getElementsByTagName('h3'),
             document.getElementsByTagName('h4'),
             document.getElementsByTagName('h5'),
-            document.getElementsByTagName('h6')
+            document.getElementsByTagName('h6'),
+            document.getElementsByTagName('a'),
+            document.getElementsByTagName('i'),
         ];
 
         //Get rid of elements that don't exist in array

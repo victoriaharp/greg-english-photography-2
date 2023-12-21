@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <script src="openLight.js"></script>
+
 
     <head>
         {% include head.html %}
@@ -12,17 +12,17 @@
 
         <header class="uppercase text-sm px-10p pt-5 mx-auto">
             <div class="text-center lg:text-left lg:grid lg:grid-cols-2 items-center justify-between border-b-2 py-5">
-                <h1 class="font-normal items-center "><a href="/">Greg English Photography</a></h2>
+                <h1 class="font-normal items-center"><a href="/">Greg English Photography</a></h2>
 
 <!-- standard links -->
                 <div class="font-sans grow uppercase text-right space-x-5 hidden lg:block">
                     <a href="/" class="text-left inline-block px-5 last:pr-0 border-b border-transparent hover:border-b-white transition-all">Home</a>
                     <a href="/gallery" class="text-left inline-block px-5 last:pr-0 border-b border-transparent hover:border-b-white transition-all">Gallery</a>
                     <a href="/contact" class="text-left inline-block px-5 last:pr-0 border-b border-transparent hover:border-b-white transition-all">Contact</a>
-                    <a class="light-mode-button">Light Mode</a>
-                    <button class="inline-block" onclick="openLight.toggleMode();">
-                        <div class="toggle-container">
-                            <div class="toggle-ball"></div>
+                    <a>Light Mode</a>
+                    <button onclick="openLight.toggleMode();">
+                        <div class="toggle-container override">
+                            <div class="toggle-ball override"></div>
                         </div>
                     </button>
                 </div>
@@ -56,16 +56,38 @@
             <div class="text-center">
                 <p class="uppercase text-3xl md:text-5xl font-bold">Greg English <br> Photography</p>
                 <nav class="my-5p">
-                    <a href="#" target="_blank"><i class="fa-brands fa-square-pinterest px-5"></i></a>
-                    <a href="#" target="_blank"><i class="fa-brands fa-instagram px-5"></i></a>
-                    <a href="#" target="_blank"><i class="fa-regular fa-envelope px-5"></i></a>
+                    <a href="#" target="_blank" class="override"><i class="fa-brands fa-square-pinterest px-5"></i></a>
+                    <a href="#" target="_blank" class="override"><i class="fa-brands fa-instagram px-5"></i></a>
+                    <a href="#" target="_blank" class="override"><i class="fa-regular fa-envelope px-5"></i></a>
                 </nav>
             </div>
 
             <img src="/images/Greg-Photo-34.JPG" alt="" class="object-cover object-center aspect-square">
         </footer>
 
+       
         {% include body-scripts.html %}
-    
+        <script>
+           
+        //Create OpenLight object
+        openLight = new OpenLight("auto");
+
+        //use openLight.addBackgroundTag("some tag") to use currently unsupported tags
+
+        //Adds override to the list of classes that shouldn't use dark mode
+        openLight.addOverrideByClassName("override");
+
+        //Changing the default colors
+        openLight.openLightColors = {
+            darkBackgroundStyle: "rgb(32,32,32)",
+            lightBackgroundStyle: "rgb(255,255,255)",
+            darkForegroundStyle: "rgb(255,255,255)",
+            lightForegroundStyle: "rgb(32,32,32)"
+        }
+
+        //Initialize after settings are set
+        openLight.init();
+
+        </script>
 </body>
 </html>
