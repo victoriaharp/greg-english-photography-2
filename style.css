@@ -53,6 +53,38 @@ img{
 }
 
 
+
+/* light mode/dark mode */
+
+.toggle-container{
+  background-color: lightblue;
+  height: 1rem;
+  padding: 0.1rem;
+  width: 2rem;
+  display: inline-block;
+  border-radius: 1.5rem;
+  text-align: left;
+}
+
+.toggle-ball{
+  background-color: white;
+  height: .8rem;
+  width: .8rem;
+  border-radius: 1rem;
+  display: inline-block;
+}
+
+.toggle-container.light-mode-active{
+  background-color: #ade6d8;
+  text-align: right;
+}
+/* light mode styles */
+/* body.light-mode-active{
+  @apply bg-white text-dark-grey;
+} */
+
+
+
 /* hamburger menu styles */
 
 .burger-button {
@@ -92,6 +124,7 @@ img{
   transform: rotateZ(270deg);
   border-color: rgba(0,0,0,0);
   background-color:rgba(0,0,0,0);
+
 }
 
 /* make sure this has the same bottom as the burger button has padding*/
@@ -132,34 +165,6 @@ img{
   white-space:nowrap;
 }
 
-/* light mode/dark mode */
-
-.toggle-container{
-  background-color: lightblue;
-  height: 1rem;
-  padding: 0.1rem;
-  width: 2rem;
-  display: inline-block;
-  border-radius: 1.5rem;
-  text-align: left;
-}
-
-.toggle-ball{
-  background-color: white;
-  height: .8rem;
-  width: .8rem;
-  border-radius: 1rem;
-  display: inline-block;
-}
-
-.toggle-container.light-mode-active{
-  background-color: #ade6d8;
-  text-align: right;
-}
-/* light mode styles */
-/* body.light-mode-active{
-  @apply bg-white text-dark-grey;
-} */
 
 .burger-button span{
   border: 1px solid white;
@@ -170,20 +175,3 @@ img{
   border: 1px solid rgb(32 32 32);
   background-color: white;
 }
-/* 
-.light-mode-active .border-b-2{
-  border-bottom: 2px solid rgb(32 32 32);
-}
-
-.light-mode-active .border-b a{
-  border-bottom: transparent;
-}
-.light-mode-active .border-b-white a:hover{
-  border-bottom: 1px solid rgb(32 32 32);
-}
-
-.light-mode-active .fa-brands, .light-mode-active .fa-regular{
-  @apply text-dark-grey;
-} */
-
-/* to do: still want to change the text from "light mode" to "dark mode" when active AND save user settings across each page */

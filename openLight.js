@@ -250,7 +250,8 @@ class OpenLight {
             document.getElementsByTagName('h5'),
             document.getElementsByTagName('h6'),
             document.getElementsByTagName('a'),
-            document.getElementsByTagName('.burger-button')
+            // document.getElementsByTagName('.burger-button'),
+            // document.getElementsByTagName('span')
         ];
 
         //Get rid of elements that don't exist in array
