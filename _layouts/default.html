@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+    <script src="openLight.js"></script>
+
     <head>
-{% include head.html %}
+        {% include head.html %}
     </head>
 
     <body class="font-sans bg-dark-grey text-white">
@@ -13,57 +15,37 @@
                 <h1 class="font-normal items-center "><a href="/">Greg English Photography</a></h2>
 
 <!-- standard links -->
-                <!-- <nav class="space-x-5 flex justify-center lg:justify-end items-center font-normal">
-                    <a href="#about" class="px-3 border-b border-transparent hover:border-b-white transition-all">About</a>
-                    <a href="/gallery.html" class="px-3 border-b border-transparent hover:border-b-white transition-all">Gallery</a>
-                    <a href="/contact.html" class="px-3 border-b border-transparent hover:border-b-white transition-all">Contact</a>
-                    <div class="light-mode">
-                        <a class="light-mode-button">Light Mode</a>
+                <div class="font-sans grow uppercase text-right space-x-5 hidden lg:block">
+                    <a href="/" class="text-left inline-block px-5 last:pr-0 border-b border-transparent hover:border-b-white transition-all">Home</a>
+                    <a href="/gallery" class="text-left inline-block px-5 last:pr-0 border-b border-transparent hover:border-b-white transition-all">Gallery</a>
+                    <a href="/contact" class="text-left inline-block px-5 last:pr-0 border-b border-transparent hover:border-b-white transition-all">Contact</a>
+                    <a class="light-mode-button">Light Mode</a>
+                    <button class="inline-block" onclick="openLight.toggleMode();">
                         <div class="toggle-container">
-                          <div class="toggle-ball"></div>
+                            <div class="toggle-ball"></div>
                         </div>
-                      </div>
-                </nav> -->
-<!-- burger button -->
-                <!-- <nav class="flex items-center justify-between text-dark-grey px-5p mt-5 z-10"> -->
-                
-                    <div class="font-sans grow uppercase text-right space-x-5 hidden lg:block">
-                
+                    </button>
+                </div>
+            <!-- mobile-->
+                <nav class="lg:hidden">
+                    <div class="burger-button">
+                        <span class="burger-top"></span>
+                        <span class="burger-middle"></span>
+                        <span class="burger-bottom"></span>
+                    </div>
+                    <div class="burger-menu">
 
-                        <a href="/" class="text-left inline-block px-5 last:pr-0 border-b border-transparent hover:border-b-white transition-all">Home</a>
-                        <a href="/gallery" class="text-left inline-block px-5 last:pr-0 border-b border-transparent hover:border-b-white transition-all">Gallery</a>
-                        <a href="/contact" class="text-left inline-block px-5 last:pr-0 border-b border-transparent hover:border-b-white transition-all">Contact</a>
-                        <div class="light-mode inline-block">
+                        <a href="/" class="text-left inline-block px-5 last:pr-0">Home</a>
+                        <a href="/gallery" class="text-left inline-block px-5 last:pr-0">Gallery</a>
+                        <a href="/contact" class="text-left inline-block px-5 last:pr-0">Contact</a>
+                        <button class="light-mode" onclick="openLight.toggleMode();">
                             <a class="light-mode-button">Light Mode</a>
                             <div class="toggle-container">
-                              <div class="toggle-ball"></div>
+                                <div class="toggle-ball"></div>
                             </div>
-                        </div>
-
-                
+                        </button>
                     </div>
-                <!-- </nav> -->
-                
-                
-                    <nav class="lg:hidden">
-                      <div class="burger-button">
-                          <span class="burger-top"></span>
-                          <span class="burger-middle"></span>
-                          <span class="burger-bottom"></span>
-                      </div>
-                       <div class="burger-menu">
-
-                            <a href="/" class="text-left inline-block px-5 last:pr-0">Home</a>
-                            <a href="/gallery" class="text-left inline-block px-5 last:pr-0">Gallery</a>
-                            <a href="/contact" class="text-left inline-block px-5 last:pr-0">Contact</a>
-                            <div class="light-mode">
-                                <a class="light-mode-button">Light Mode</a>
-                                <div class="toggle-container">
-                                    <div class="toggle-ball"></div>
-                                </div>
-                            </div>
-                      </div>
-                    </nav>
+                </nav>
                 
             </div>
         </header>
@@ -84,5 +66,6 @@
         </footer>
 
         {% include body-scripts.html %}
+    
 </body>
 </html>

@@ -43,20 +43,6 @@ img{
   max-width: 100%;
 }
 
-/* dark mode toggle */
-/* .light-mode{
-  text-align: right;
-}
-.light-mode p{
-  margin-bottom: 0.2rem;
-  font-size: 0.9rem;
-} */
-
-
-/* .light-mode-active .button{
-  color: #ade6d8;
-  border-color: #ade6d8;
-} */
 
 @layer utilities{
   .rotate-text-180{
@@ -176,7 +162,7 @@ img{
   text-align: right;
 }
 /* light mode styles */
-body.light-mode-active{
+/* body.light-mode-active{
   @apply bg-white text-dark-grey;
 }
 
@@ -199,6 +185,6 @@ body.light-mode-active{
 
 .light-mode-active .fa-brands, .light-mode-active .fa-regular{
   @apply text-dark-grey;
-}
+} */
 
 /* to do: still want to change the text from "light mode" to "dark mode" when active AND save user settings across each page */

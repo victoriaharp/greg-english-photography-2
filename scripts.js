@@ -8,18 +8,52 @@ function toggleBurger() {
 
 burgerButton.addEventListener('click', toggleBurger)
 
+
+
+
 // A $( document ).ready() block.
 $( document ).ready(function() {
 
     // dark mode toggle
-$('.toggle-container').click(function(){
-    $('body').toggleClass('light-mode-active');
-    $(this).toggleClass('light-mode-active');
+    $('.toggle-container').click(function(){
+        $('body').toggleClass('light-mode-active');
+        $(this).toggleClass('light-mode-active');
+      });
+
+      // hamburger button
+      $('.hamburger-button').click(function(){
+        $('.mobile-menu').slideToggle(100);
+        $(this).toggleClass('active');
+      });
+
+    // magnific popup
+    $('.popup-gallery').magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      tLoading: 'Loading image #%curr%...',
+      mainClass: 'mfp-img-mobile',
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+      },
+      image: {
+        tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+        titleSrc: function(item) {
+          return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+        }
+      }
+    });
   });
 
-  // hamburger button
-  $('.hamburger-button').click(function(){
-    $('.mobile-menu').slideToggle(100);
-    $(this).toggleClass('active');
-  });
-});
+
+var openLight = new openLight("auto");
+      openLight.openLightColors = {
+        darkBackgroundStyle: "rgb(32, 32, 32)",
+        lightBackgroundStyle: "rgb(255, 255, 255)",
+        darkForegroundStyle: "rgb(255, 255, 255)",
+        lightForegroundStyle: "rgb(32, 32, 32)"
+      }
+      openLight.init();
+
+      openLight.toggleMode();
