@@ -65,14 +65,9 @@ img{
 /*this is where you can change the color of the buttons*/
 .burger-button span{
   width: 30px;
-  border: 1px solid white;
-  background-color: rgb(32 32 32);
   display: block;
   border-radius: 22px;
   transition: 2s;
-}
-.burger-button.active span{
-  @apply bg-dark-grey border-dark-grey;
 }
 
 .burger-top, .burger-bottom{
@@ -167,12 +162,13 @@ img{
 } */
 
 .burger-button span{
-  border: 1px solid rgb(32 32 32);
-  background-color: white;
-}
-.light-mode-active .burger-button span{
   border: 1px solid white;
   background-color: rgb(32 32 32);
+
+}
+.light-mode-active .burger-button span{
+  border: 1px solid rgb(32 32 32);
+  background-color: white;
 }
 /* 
 .light-mode-active .border-b-2{
