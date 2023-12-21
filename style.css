@@ -164,14 +164,17 @@ img{
 /* light mode styles */
 /* body.light-mode-active{
   @apply bg-white text-dark-grey;
-}
+} */
 
-
-.light-mode-active .burger-button span{
+.burger-button span{
   border: 1px solid rgb(32 32 32);
   background-color: white;
 }
-
+.light-mode-active .burger-button span{
+  border: 1px solid white;
+  background-color: rgb(32 32 32);
+}
+/* 
 .light-mode-active .border-b-2{
   border-bottom: 2px solid rgb(32 32 32);
 }

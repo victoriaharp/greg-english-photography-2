@@ -29,19 +29,19 @@
             <!-- mobile-->
                 <nav class="lg:hidden">
                     <div class="burger-button">
-                        <span class="burger-top"></span>
-                        <span class="burger-middle"></span>
-                        <span class="burger-bottom"></span>
+                        <span class="burger-top override"></span>
+                        <span class="burger-middle override"></span>
+                        <span class="burger-bottom override"></span>
                     </div>
                     <div class="burger-menu">
 
                         <a href="/" class="text-left inline-block px-5 last:pr-0">Home</a>
                         <a href="/gallery" class="text-left inline-block px-5 last:pr-0">Gallery</a>
                         <a href="/contact" class="text-left inline-block px-5 last:pr-0">Contact</a>
-                        <button class="light-mode" onclick="openLight.toggleMode();">
-                            <a class="light-mode-button">Light Mode</a>
-                            <div class="toggle-container">
-                                <div class="toggle-ball"></div>
+                        <a>Light Mode</a>
+                        <button onclick="openLight.toggleMode();">
+                            <div class="toggle-container override">
+                                <div class="toggle-ball override"></div>
                             </div>
                         </button>
                     </div>
