@@ -1,0 +1,36 @@
+---
+layout: default
+heading: Night Shoots
+image: /images/night-shoots/image-13.jpg
+night-shoots-photos:
+  - photo_image: /images/night-shoots/image-1.jpg
+  - photo_image: /images/night-shoots/image-2.jpg
+  - photo_image: /images/night-shoots/image-3.jpg
+  - photo_image: /images/night-shoots/image-4.jpg
+  - photo_image: /images/night-shoots/image-5.jpg
+  - photo_image: /images/night-shoots/image-6.jpg
+  - photo_image: /images/night-shoots/image-7.jpg
+  - photo_image: /images/night-shoots/image-8.jpg
+  - photo_image: /images/night-shoots/image-9.jpg
+  - photo_image: /images/night-shoots/image-10.jpg
+  - photo_image: /images/night-shoots/image-11.jpg
+  - photo_image: /images/night-shoots/image-12.jpg
+seo: 
+    title: Greg English Photography
+    description: 
+    keywords:
+    social_image: /images/Greg-Photo-205.JPG
+    hide-from-google: false
+---
+
+{% include hero-banner.html %}
+
+<section class="px-10p pb-5p">
+	<div class="columns-2 md:columns-3 gap-10">
+	{% for item in page.night-shoots-photos %}
+	
+        {% include photo-loop-item.html %}
+	
+	{% endfor %}
+	</div>
+</section>

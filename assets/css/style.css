@@ -430,9 +430,6 @@ video {
 .flex {
   display: flex;
 }
-.grid {
-  display: grid;
-}
 .hidden {
   display: none;
 }
@@ -448,9 +445,6 @@ video {
 .max-h-\[60vh\] {
   max-height: 60vh;
 }
-.max-h-\[75vh\] {
-  max-height: 75vh;
-}
 .max-h-\[50vh\] {
   max-height: 50vh;
 }
@@ -463,8 +457,13 @@ video {
 .grow {
   flex-grow: 1;
 }
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.columns-2 {
+  -moz-columns: 2;
+       columns: 2;
+}
+.break-inside-avoid {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
 }
 .flex-nowrap {
   flex-wrap: nowrap;
@@ -477,9 +476,6 @@ video {
 }
 .gap-5 {
   gap: 1.25rem;
-}
-.gap-\[5rem\] {
-  gap: 5rem;
 }
 .gap-10 {
   gap: 2.5rem;
@@ -527,14 +523,6 @@ video {
   -o-object-position: center;
      object-position: center;
 }
-.object-bottom {
-  -o-object-position: bottom;
-     object-position: bottom;
-}
-.object-top {
-  -o-object-position: top;
-     object-position: top;
-}
 .px-10p {
   padding-left: 10%;
   padding-right: 10%;
@@ -563,11 +551,17 @@ video {
   padding-left: 0px;
   padding-right: 0px;
 }
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
 .pt-5 {
   padding-top: 1.25rem;
 }
 .pb-5p {
   padding-bottom: 5%;
+}
+.pb-10 {
+  padding-bottom: 2.5rem;
 }
 .text-left {
   text-align: left;
@@ -581,26 +575,19 @@ video {
 .font-sans {
   font-family: Figtree, sans-serif;
 }
-.text-\[4vw\] {
-  font-size: 4vw;
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 1;
 }
 .text-sm {
   font-size: 0.875rem;;
   line-height: 1.2;
 }
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 1;
-}
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 1.2;
+.font-normal {
+  font-weight: 400;
 }
 .font-bold {
   font-weight: 700;
-}
-.font-normal {
-  font-weight: 400;
 }
 .uppercase {
   text-transform: uppercase;
@@ -806,6 +793,10 @@ img{
   .md\:grid {
     display: grid;
   }
+  .md\:columns-3 {
+    -moz-columns: 3;
+         columns: 3;
+  }
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -815,9 +806,6 @@ img{
   }
 }
 @media (min-width: 1024px) {
-  .lg\:mb-0 {
-    margin-bottom: 0px;
-  }
   .lg\:block {
     display: block;
   }
@@ -826,9 +814,6 @@ img{
   }
   .lg\:hidden {
     display: none;
-  }
-  .lg\:aspect-square {
-    aspect-ratio: 1 / 1;
   }
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
