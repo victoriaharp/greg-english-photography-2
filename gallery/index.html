@@ -2,82 +2,47 @@
 layout: default
 heading: Nature's canvas unveiled. A gallery of wilderness through the lens of adventure. 
 image: /images/Greg-Photo-49.JPG
-mountain-photos:
-    - photo_image: /images/greg-photo-34.jpg
-    - photo_image: /images/greg-photo-39.jpg
-    - photo_image: /images/greg-photo-72.jpg
-    - photo_image: /images/greg-photo-40.jpg
-    - photo_image: /images/greg-photo-87.jpg
-    - photo_image: /images/greg-photo-49.jpg
-    - photo_image: /images/greg-photo-98.jpg
-    - photo_image: /images/greg-photo-142.jpg
-    - photo_image: /images/greg-photo-111.jpg
-    - photo_image: /images/greg-photo-143.jpg
-    - photo_image: /images/greg-photo-136.jpg
-    - photo_image: /images/greg-photo-167.jpg
-    - photo_image: /images/greg-photo-190.jpg
-dog-photos:
-    - photo_image: /images/greg-photo-24.jpg
-    - photo_image: /images/greg-photo-50.jpg
-    - photo_image: /images/greg-photo-87.jpg
-    - photo_image: /images/greg-photo-91.jpg
-    - photo_image: /images/greg-photo-94.jpg
-    - photo_image: /images/greg-photo-136.jpg
+collections-cards:
+  - photo_image: /images/sports/image-11.jpg
+    title: Sports
+    link: sports.html
+  - photo_image: /images/Greg-Photo-49.JPG
+    title: Night Shoots
+    link: night-shoots.html
+  - photo_image: /images/IMG_0511.jpg
+    title: Product Photos
+    link: product-photos.html
+  - photo_image: /images/portraits-pets/image-30.jpg
+    title: Portraits - Pets
+    link: portraits-pets.html
+  - photo_image: /images/Greg-Photo-72.JPG
+    title: Portraits - Humans
+    link: portraits-humans.html
+  - photo_image: /images/landscapes-nature/image-51.jpg
+    title: Landscapes - Nature
+    link: landscapes-nature.html
 seo:
     title: Greg English Photography | Gallery
     description:
     keywords:
-    social_image: /images/greg.205.jpg
+    social_image: /images/greg-205.jpg
     hide-from-google: false
 ---
+
 {% include hero-banner.html %}
 
+<h2 class="uppercase text-3xl md:text-5xl mb-5p text-center">Collections</h2>
 
-
-
-<!-- mountains -->
-<!-- 
-<section class="mb-5p">
-    <h2 class="uppercase text-3xl md:text-5xl  text-right px-10p mb-5p">The Mountains</h2>
-
-    <div class="flex flex-nowrap gap-5 mx-auto overflow-x-scroll px-0 mb-5p">
-        {% for item in page.mountain-photos %}
-	
-		    {% include photo-loop-item-free.html %}
-	
-	    {% endfor %}
-    </div>
-
-
-</section> -->
-
-
-<!-- NYC -->
-<!-- <section class="mb-5p px-10p">
-    <h2 class="uppercase text-3xl md:text-5xl mb-5p">New York City</h2>
-
-    <img src="/images/greg-photo-93.jpg" class="max-h-[60vh] w-full object-cover object-bottom aspect-landscape mb-5p">
+<section class="grid grid-cols-3 gap-5 px-10p mb-10p justify-center">
     
-    <div class="lg:grid lg:grid-cols-2 gap-[5rem] justify-between">
-        <img src="/images/greg-photo-27.jpg" class="object-cover max-h-[75vh] mb-5p lg:mb-0 object-center aspect-square">
+    {% for item in page.collections-cards %}
 
-        <img src="/images/greg-photo-155.jpg" class="object-cover max-h-[75vh] object-top aspect-square">
-    </div>
-    </section>
-</section> -->
+    <a href="/gallery/{{item.link}}" class="bg-white p-5 border-1 border-dark-grey">
+        <img src="{{ item.photo_image }}" alt="" class="aspect-square object-cover object-center pb-5p">
+        <h3 class="py-5p font-sans uppercase font-bold" id="text-dark-grey">{{ item.title }}</h3>
+    </a>
 
-
-<!-- doggos -->
-<!-- <section class="mb-5p">
-    <h2 class="uppercase text-3xl md:text-5xl  text-right px-10p mb-5p">Best boys and girls</h2>
-
-    <div class="flex flex-nowrap gap-5 mx-auto overflow-x-scroll px-0 mb-5p">
-        {% for item in page.dog-photos %}
-	
-		    {% include photo-loop-item-free.html %}
-	
-	    {% endfor %}
-    </div>
+    {% endfor %}
 
 
 </section>

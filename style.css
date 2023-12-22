@@ -18,9 +18,9 @@ h1, h2, h3, h4, h5 {
   font-weight: 800;
 }
 
-a i{
+/* a i{
   color: white;
-}
+} */
 
 input, textarea{
   margin-bottom: 1rem;
@@ -43,6 +43,9 @@ img{
   max-width: 100%;
 }
 
+#text-dark-grey{
+  @apply text-dark-grey;
+}
 
 @layer utilities{
   .rotate-text-180{

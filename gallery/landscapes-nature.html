@@ -1,8 +1,8 @@
 ---
 layout: default
 heading: Landscapes - Nature
-image: /images/landscapes-nature/image-7.jpg
-landscapes-nature-photos:
+image: /images/landscapes-nature/image-30.jpg
+gallery:
   - photo_image: /images/landscapes-nature/image-1.jpg
   - photo_image: /images/landscapes-nature/image-2.jpg
   - photo_image: /images/landscapes-nature/image-3.jpg
@@ -23,6 +23,66 @@ landscapes-nature-photos:
   - photo_image: /images/landscapes-nature/image-19.jpg
   - photo_image: /images/landscapes-nature/image-20.jpg
   - photo_image: /images/landscapes-nature/image-21.jpg
+  - photo_image: /images/landscapes-nature/image-22.jpg
+  - photo_image: /images/landscapes-nature/image-23.jpg
+  - photo_image: /images/landscapes-nature/image-24.jpg
+  - photo_image: /images/landscapes-nature/image-25.jpg
+  - photo_image: /images/landscapes-nature/image-26.jpg
+  - photo_image: /images/landscapes-nature/image-27.jpg
+  - photo_image: /images/landscapes-nature/image-28.jpg
+  - photo_image: /images/landscapes-nature/image-29.jpg
+  - photo_image: /images/landscapes-nature/image-54.jpg
+  - photo_image: /images/landscapes-nature/image-31.jpg
+  - photo_image: /images/landscapes-nature/image-32.jpg
+  - photo_image: /images/landscapes-nature/image-33.jpg
+  - photo_image: /images/landscapes-nature/image-34.jpg
+  - photo_image: /images/landscapes-nature/image-35.jpg
+  - photo_image: /images/landscapes-nature/image-36.jpg
+  - photo_image: /images/landscapes-nature/image-37.jpg
+  - photo_image: /images/landscapes-nature/image-38.jpg
+  - photo_image: /images/landscapes-nature/image-39.jpg
+  - photo_image: /images/landscapes-nature/image-40.jpg
+  - photo_image: /images/landscapes-nature/image-41.jpg
+  - photo_image: /images/landscapes-nature/image-42.jpg
+  - photo_image: /images/landscapes-nature/image-43.jpg
+  - photo_image: /images/landscapes-nature/image-44.jpg
+  - photo_image: /images/landscapes-nature/image-45.jpg
+  - photo_image: /images/landscapes-nature/image-46.jpg
+  - photo_image: /images/landscapes-nature/image-47.jpg
+  - photo_image: /images/landscapes-nature/image-48.jpg
+  - photo_image: /images/landscapes-nature/image-49.jpg
+  - photo_image: /images/landscapes-nature/image-50.jpg
+  - photo_image: /images/landscapes-nature/image-51.jpg
+  - photo_image: /images/landscapes-nature/image-52.jpg
+  - photo_image: /images/landscapes-nature/image-53.jpg
+  - photo_image: /images/landscapes-nature/image-7.jpg
+  - photo_image: /images/landscapes-nature/image-55.jpg
+  - photo_image: /images/landscapes-nature/image-56.jpg
+  - photo_image: /images/landscapes-nature/image-57.jpg
+  - photo_image: /images/landscapes-nature/image-58.jpg
+  - photo_image: /images/landscapes-nature/image-59.jpg
+  - photo_image: /images/landscapes-nature/image-60.jpg
+  - photo_image: /images/landscapes-nature/image-61.jpg
+  - photo_image: /images/landscapes-nature/image-62.jpg
+  - photo_image: /images/landscapes-nature/image-63.jpg
+  - photo_image: /images/landscapes-nature/image-64.jpg
+  - photo_image: /images/landscapes-nature/image-65.jpg
+  - photo_image: /images/landscapes-nature/image-66.jpg
+  - photo_image: /images/landscapes-nature/image-67.jpg
+  - photo_image: /images/landscapes-nature/image-68.jpg
+  - photo_image: /images/landscapes-nature/image-69.jpg
+  - photo_image: /images/landscapes-nature/image-70.jpg
+  - photo_image: /images/landscapes-nature/image-71.jpg
+  - photo_image: /images/landscapes-nature/image-72.jpg
+  - photo_image: /images/landscapes-nature/image-73.jpg
+  - photo_image: /images/landscapes-nature/image-74.jpg
+  - photo_image: /images/landscapes-nature/image-75.jpg
+  - photo_image: /images/landscapes-nature/image-76.jpg
+  - photo_image: /images/landscapes-nature/image-77.jpg
+  - photo_image: /images/landscapes-nature/image-78.jpg
+  - photo_image: /images/landscapes-nature/image-79.jpg
+  - photo_image: /images/landscapes-nature/image-80.jpg
+  - photo_image: /images/landscapes-nature/image-81.jpg
 seo: 
     title: Greg English Photography
     description: 
@@ -33,12 +93,4 @@ seo:
 
 {% include hero-banner.html %}
 
-<section class="px-10p pb-5p">
-	<div class="columns-2 md:columns-3 gap-10">
-	{% for item in page.landscapes-nature-photos %}
-	
-        {% include photo-loop-item.html %}
-	
-	{% endfor %}
-	</div>
-</section>
+{% include gallery-masonry-loop.html %}

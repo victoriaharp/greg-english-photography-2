@@ -249,7 +249,7 @@ class OpenLight {
             document.getElementsByTagName('h4'),
             document.getElementsByTagName('h5'),
             document.getElementsByTagName('h6'),
-            document.getElementsByTagName('a'),
+            // document.getElementsByTagName('a')
             // document.getElementsByTagName('.burger-button'),
             // document.getElementsByTagName('span')
         ];
