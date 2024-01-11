@@ -159,7 +159,7 @@ img{
   right:0;
 }
 .burger-menu a {
-  @apply text-dark-grey;
+  /* @apply text-dark-grey; */
   text-decoration: none;
   font-size: 20px;
   display:block;
