@@ -37,9 +37,9 @@ seo:
     
     {% for item in page.collections-cards %}
 
-    <a href="/gallery/{{item.link}}" class="bg-white p-5 border-1 border-dark-grey">
+    <a href="/gallery/{{item.link}}" class="bg-white p-5 border-1 border-dark-grey override">
         <img src="{{ item.photo_image }}" alt="" class="aspect-square object-cover object-center pb-5p">
-        <h3 class="py-5p font-sans uppercase font-bold" id="text-dark-grey">{{ item.title }}</h3>
+        <h3 class="py-5p font-sans uppercase font-bold text-dark-grey" >{{ item.title }}</h3>
     </a>
 
     {% endfor %}
